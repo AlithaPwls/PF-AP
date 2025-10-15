@@ -1,0 +1,444 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ZORG DAT DE HERO NIET ACHTER DE NAVBAR VERDWIJNT */
+  body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #F7F3EF;
+    color: #1C1C1C;
+    line-height: 1.6;
+    padding-top: 70px; /* iets kleiner, zodat hij niet duwt */
+  }
+  /* ========== HEADER (STICKY NAVBAR) ========== */
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1C1C1C;  /* vaste donkere kleur */
+    color: #F7F3EF;
+    padding: 1.2rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-family: "Playfair Display", serif;
+    font-size: 1.7rem;
+    color: #F7F3EF;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #F7F3EF;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #6B1E1E;
+  }
+  
+ 
+  
+  /* ========== HERO ========== */
+
+  
+  .hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4rem;
+    color: #F7F3EF;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .phonetic {
+    color: #B6AFA9;
+    font-style: italic;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero {
+    position: relative;
+    background-color: #1C1C1C;
+    color: #F7F3EF;
+    text-align: center;
+    padding: 13rem 2rem 21rem 2rem;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      rgba(107, 30, 30, 0.35),
+      transparent 60%
+    );
+  }
+  
+  
+  @keyframes moveGlow {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(20%, 10%) rotate(30deg); }
+  }
+
+  .hero h2 {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    color: #B6AFA9;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tagline {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #B6AFA9;
+    font-style: italic;
+    opacity: 0;
+    animation: fadeIn 2.5s ease 1.5s forwards;
+  }
+  
+  
+  /* ========== PROJECTS ========== */
+  #projects {
+    padding: 4rem 2rem 8rem 2rem;
+    text-align: center;
+    background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
+    max-width: 1200px;
+    margin: 5em auto; 
+  }
+  
+  #projects h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.8rem;
+    color: #6B1E1E;
+    margin-bottom: 1rem;
+  }
+
+  
+  #projects .para {
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    color: #565446;
+  }
+  
+  .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .project-item {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    animation: fadeUp 0.7s ease forwards;
+  }
+  
+  .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+    border: 1px solid #6B1E1E33;
+  }
+  
+  .project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-content {
+    padding: 1.8rem;
+  }
+  
+  .project-content h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    color: #6B1E1E;
+    margin-bottom: 0.6rem;
+  }
+  
+  .project-content p {
+    font-size: 0.95rem;
+    color: #4e4b45;
+    margin-bottom: 1rem;
+    line-height: 1.7;
+  }
+  
+  .pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  
+  .pill {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    color: #1C1C1C;
+    padding: 0.4rem 1rem;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 1px solid #6B1E1E;
+  }
+  
+  .pill:hover {
+    background-color: #6B1E1E;
+    color: #F7F3EF;
+  }
+  
+  /* ========== SKILLS & TECHNOLOGIES ========== */
+  #skills {
+    text-align: center;
+    background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
+    padding: 4rem 2rem 8rem 2rem;
+    max-width: 1200px;
+    margin: 5em auto;
+
+  }
+
+ #technologies {
+    text-align: center;
+    background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
+    padding: 4rem 2rem 8rem 2rem;
+    max-width: 1200px;
+    margin: 5em auto; 
+
+  }
+  
+  
+  #skills h2, #technologies h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #6B1E1E;
+    margin-bottom: 1rem;
+  }
+
+  #skills h2::after, 
+  #technologies h2::after, 
+  #projects h2::after, 
+  #about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #6B1E1E;
+    margin: 0.8rem auto 2rem auto;
+    border-radius: 2px;
+  }
+  
+  #skills .para, #technologies .para {
+    max-width: 700px;
+    margin: 0 auto 4rem auto;
+    color: #4E4B45;
+  }
+  
+  .skills-list, .technologies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .skill-item, .technology-item {
+    background-color: #fff;
+    border: 1px solid #E5E0DC;
+    border-radius: 10px;
+    padding: 2.5rem 2rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  
+  .skill-item:hover, .technology-item:hover {
+    border-color: #6B1E1E;
+    transform: translateY(-6px);
+  }
+  
+  .skill-item h3, .technology-item h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    color: #6B1E1E;
+    margin-bottom: 0.6rem;
+    transition: color 0.3s ease;
+  }
+  
+  .skill-item p, .technology-item p {
+    font-size: 0.95rem;
+    color: #4E4B45;
+    line-height: 1.7;
+  }
+  
+  /* Fade-up animatie */
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-up.visible {
+    animation: fadeUp 0.7s ease forwards;
+  }
+
+  #technologies h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #6B1E1E;
+    margin: 0.8rem auto 2rem auto;
+    border-radius: 2px;
+  }
+  
+  /* ========== FOOTER ========== */
+  .footer {
+    background-color: #1C1C1C;
+    color: #B6AFA9;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+/* ========== ABOUT ME ========== */
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
+    padding: 4rem 2rem 8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+  }
+  
+  /* TEKSTGEDEELTE */
+  #about .text {
+    flex: 1;
+    text-align: left;
+    padding: 1em 2em;
+    max-width: 600px;
+  }
+  
+  #about h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.6rem;
+    color: #6B1E1E;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+  }
+  
+  #about h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #6B1E1E;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+  
+  #about .para {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #4E4B45;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+  }
+  
+  /* FOTO */
+  #about .imageabout {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  
+  #about .imageabout img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #6B1E1E;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    z-index: 2;
+  }
+  
+  #about .imageabout img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* ZACHTE DECORATIEVE VORM ACHTER FOTO */
+  #about .imageabout::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, #d9c9c0 0%, transparent 70%);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    z-index: 1;
+    opacity: 0.5;
+  }
+  
+  /* FADE-UP animatie */
+  #about .para {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+  
+  #about .para.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
