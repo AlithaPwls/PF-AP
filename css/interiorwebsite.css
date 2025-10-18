@@ -64,16 +64,35 @@ html {
 /* ======= MOCKUPS ======= */
 .mockups {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 3rem;
+  flex-direction: row;
   margin-top: 3rem;
+  
 }
 
 .mockup-card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: trans
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    position: relative; /* Added for positioning */
+
+}
+
+.mockup-card-desktop img {
+        max-width: 50%;
+        height: auto;
+        display: block;
+}
+
+.mockup-card-mobile {
+        position: absolute; /* Added for overlapping */
+        top: 105%; /* Adjust as needed */
+        left: 54%; /* Center horizontally */
+        transform: translateX(-50%); /* Center adjustment */
+}
+
+.mockup-card-mobile img {
+        max-width: 37%;
+        height: auto;
+        display: block;
 }
