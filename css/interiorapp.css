@@ -1,0 +1,137 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* ========== RESET ========== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ========== BASIS ========== */
+  body {
+    font-family: "Montserrat", sans-serif;
+    color: #1C1C1C;
+    background-color: #F7F3EF;
+    line-height: 1.7;
+  }
+  
+  /* ========== HERO / INTRO ========== */
+  .project-hero {
+    text-align: center;
+    background-color: #1C1C1C;
+    color: #F7F3EF;
+    padding: 8rem 2rem 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .project-hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .project-hero .subtitle {
+    color: #B6AFA9;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #6B1E1E;
+    color: #F7F3EF;
+    padding: 0.9rem 2rem;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .btn:hover {
+    background-color: #501717;
+  }
+  
+  /* ========== PROJECT CONTENT ========== */
+  .project-content {
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+  
+  .project-content .text {
+    max-width: 700px;
+    text-align: center;
+  }
+  
+  .project-content h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.5rem;
+    color: #6B1E1E;
+    margin-bottom: 1rem;
+  }
+  
+  .project-content p {
+    color: #4E4B45;
+    margin-bottom: 1.3rem;
+    font-size: 1rem;
+  }
+  
+  /* ========== MOCKUPS ========== */
+  #mockups {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+  }
+  
+  .mockup-card {
+    overflow: hidden;
+    max-width: 200px;
+  }
+  
+  .mockup-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+
+  
+  /* ========== FADE-UP ANIMATIE ========== */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  
+  .fade-up.visible {
+    animation: fadeUp 0.8s ease forwards;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* ========== FOOTER ========== */
+  .footer {
+    background-color: #1C1C1C;
+    color: #B6AFA9;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+  

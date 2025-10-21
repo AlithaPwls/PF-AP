@@ -11,7 +11,8 @@ const observer = new IntersectionObserver(entries => {
 });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-document.querySelectorAll('#about .para').forEach(el => observer.observe(el));
+document.querySelectorAll('#about .para, #about .imageabout img').forEach(el => observer.observe(el));
+
 
 
 const hero = document.querySelector('.hero');
