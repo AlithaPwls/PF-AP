@@ -1,17 +1,40 @@
+/* ========== FONTS ========== */
+@font-face {
+  font-family: "Ethereal";
+  src: url("../fonts/Etherealdemo-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ethereal";
+  src: url("../fonts/Etherealdemo-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* ========== BASIS ========== */
 html {
   scroll-behavior: smooth;
 }
 
-/* ========== RESET ========== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========== BASIS ========== */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f7f3ef;
+  color: #1C1C1C;
+  line-height: 1.7;
+}
 
-/* ========== HEADER (STICKY NAVBAR) ========== */
+h1, h2, h3 {
+  font-family: "Ethereal", "Playfair Display", serif;
+  letter-spacing: 0.5px;
+}
 
 /* ========== HERO ========== */
 .hero {
@@ -26,32 +49,20 @@ html {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    rgba(107, 30, 30, 0.35),
-    transparent 60%
-  );
+  inset: 0;
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(107, 30, 30, 0.35), transparent 60%);
 }
 
 .hero h1 {
-  font-family: "Playfair Display", serif;
   font-size: 4rem;
-  color: #F7F3EF;
-  position: relative;
   z-index: 1;
+  position: relative;
 }
 
 .phonetic {
   color: #B6AFA9;
   font-style: italic;
   margin-top: 0.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 .hero h2 {
@@ -60,8 +71,6 @@ html {
   margin-top: 2rem;
   text-transform: uppercase;
   color: #B6AFA9;
-  position: relative;
-  z-index: 1;
 }
 
 .tagline {
@@ -71,23 +80,6 @@ html {
   font-style: italic;
   opacity: 0;
   animation: fadeIn 2.5s ease 1.5s forwards;
-}
-
-/* ========== FADE-UP ANIMATIE ALGEMEEN ========== */
-.fade-up {
-  opacity: 0;
-  transform: translateY(4px);
-}
-
-.fade-up.visible {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(1);
-  }
 }
 
 /* ========== PROJECTS ========== */
@@ -100,7 +92,6 @@ html {
 }
 
 #projects h2 {
-  font-family: "Playfair Display", serif;
   font-size: 2.8rem;
   color: #6B1E1E;
   margin-bottom: 1rem;
@@ -138,12 +129,6 @@ html {
   transition: all 0.35s ease;
 }
 
-/* fade-up voor projecten */
-
-.project-item.visible {
-  animation: fadeUp 0.8s ease forwards;
-}
-
 .project-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
@@ -161,7 +146,6 @@ html {
 }
 
 .project-content h3 {
-  font-family: "Playfair Display", serif;
   font-size: 1.4rem;
   color: #6B1E1E;
   margin-bottom: 0.6rem;
@@ -171,7 +155,12 @@ html {
   font-size: 0.95rem;
   color: #4e4b45;
   margin-bottom: 1rem;
-  line-height: 1.7;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .pills {
@@ -182,14 +171,11 @@ html {
 }
 
 .pill {
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  color: #1C1C1C;
-  padding: 0.4rem 1rem;
+  border: 1px solid #6B1E1E;
   border-radius: 30px;
+  padding: 0.4rem 1rem;
   font-size: 0.85rem;
   transition: all 0.3s ease;
-  border: 1px solid #6B1E1E;
 }
 
 .pill:hover {
@@ -197,8 +183,8 @@ html {
   color: #F7F3EF;
 }
 
-/* ========== SKILLS & TECHNOLOGIES ========== */
-#skills, #technologies {
+/* ========== SKILLS ========== */
+#skills {
   text-align: center;
   background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
   padding: 4rem 2rem 8rem 2rem;
@@ -206,14 +192,94 @@ html {
   margin: 5em auto;
 }
 
-#skills h2, #technologies h2 {
-  font-family: "Playfair Display", serif;
+#skills h2 {
   font-size: 2.5rem;
   color: #6B1E1E;
   margin-bottom: 1rem;
 }
 
-#skills h2::after, 
+#skills h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #6B1E1E;
+  margin: 0.8rem auto 2rem auto;
+  border-radius: 2px;
+}
+
+.skills-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.skills-toggle button {
+  background-color: transparent;
+  border: 2px solid #6B1E1E;
+  color: #6B1E1E;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skills-toggle button:hover {
+  background-color: #6B1E1E;
+  color: #F7F3EF;
+}
+
+.skills-toggle button.active {
+  background-color: #6B1E1E;
+  color: #F7F3EF;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-item {
+  background-color: #fff;
+  border: 1px solid #E5E0DC;
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  border-color: #6B1E1E;
+  transform: translateY(-4px);
+}
+
+.skill-item h3 {
+  font-size: 1.4rem;
+  color: #6B1E1E;
+  margin-bottom: 0.6rem;
+}
+
+/* ========== TECHNOLOGIES ========== */
+#technologies {
+  text-align: center;
+  background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
+  padding: 4rem 2rem 8rem 2rem;
+  max-width: 1200px;
+  margin: 5em auto;
+}
+
+#technologies h2 {
+  font-size: 2.5rem;
+  color: #6B1E1E;
+  margin-bottom: 1rem;
+}
+
 #technologies h2::after {
   content: "";
   display: block;
@@ -224,13 +290,15 @@ html {
   border-radius: 2px;
 }
 
-#skills .para, #technologies .para {
+#technologies .para {
   max-width: 700px;
   margin: 0 auto 4rem auto;
   color: #4E4B45;
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-.skills-list, .technologies-list {
+.technologies-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
@@ -238,95 +306,58 @@ html {
   margin: 0 auto;
 }
 
-.skill-item, .technology-item {
+.technology-item {
   background-color: #fff;
   border: 1px solid #E5E0DC;
   border-radius: 10px;
   padding: 2.5rem 2rem;
   text-align: left;
   transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(40px);
 }
 
-.skill-item.visible, .technology-item.visible, .project-item.visible {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.skill-item:hover, .technology-item:hover {
+.technology-item:hover {
   border-color: #6B1E1E;
   transform: translateY(-4px);
 }
 
-.skill-item h3, .technology-item h3 {
-  font-family: "Playfair Display", serif;
+.technology-item h3 {
   font-size: 1.4rem;
   color: #6B1E1E;
   margin-bottom: 0.6rem;
 }
 
-/* ========== ABOUT ME ========== */
+.technology-item p {
+  font-size: 0.95rem;
+  color: #4E4B45;
+  line-height: 1.7;
+}
+
+/* ========== ABOUT ========== */
 #about {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
+  flex-wrap: wrap;
   padding: 4rem 2rem 8rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap;
+  background: linear-gradient(180deg, #f0eae5 0%, #f7f3ef 100%);
 }
 
 #about .text {
   flex: 1;
   text-align: left;
-  padding: 1em 2em;
   max-width: 600px;
 }
 
 #about h2 {
-  font-family: "Playfair Display", serif;
   font-size: 2.6rem;
   color: #6B1E1E;
-  margin-bottom: 1.5rem;
   text-align: center;
-  position: relative;
+  margin-bottom: 2rem;
 }
 
-#about h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background-color: #6B1E1E;
-  margin: 0.5rem auto 2rem auto;
-  border-radius: 2px;
-}
-
-#about .para {
-  font-size: 1rem;
-  line-height: 1.9;
-  color: #4E4B45;
-  margin-bottom: 1.5rem;
-  text-align: justify;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-#about .para.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* FOTO */
-#about .imageabout {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
 #about .imageabout img {
   width: 320px;
   height: 320px;
@@ -334,38 +365,6 @@ html {
   object-fit: cover;
   border: 5px solid #6B1E1E;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  opacity: 0; /* <-- verander naar 0 */
-  transform: translateY(40px);
-  transition: all 0.8s ease, transform 0.6s ease, box-shadow 0.6s ease;
-  z-index: 2;
-}
-
-/* Fade-up animatie bij scroll voor de afbeelding */
-
-
-#about .imageabout img.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-#about .imageabout img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.25);
-}
-
-#about .imageabout::before {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, #d9c9c0 0%, transparent 70%);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.1);
-  z-index: 1;
-  opacity: 0.5;
 }
 
 /* ========== FOOTER ========== */
