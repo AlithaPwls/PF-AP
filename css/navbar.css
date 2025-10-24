@@ -74,3 +74,44 @@ html {
     color: #6B1E1E;
   }
   
+
+  /* ========== RESPONSIVE NAVBAR ========== */
+
+/* Verberg hamburger standaard */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger img {
+  width: 26px;
+  height: 26px;
+}
+
+/* ===== MOBILE STYLING ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px; /* net onder navbar */
+    right: 0;
+    width: 100%;
+    background-color: #1C1C1C;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  }
+
+  .nav-links.show {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
