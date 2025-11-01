@@ -1,40 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodkiosk</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodkiosk – Project | Alitha Pauwels</title>
 
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6535040,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-      </script>
+  <!-- Fonts & CSS -->
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/foodkiosk.css">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="nl_BE" />
+  <meta property="og:site_name" content="Alitha Pauwels" />
+  <meta property="og:title" content="Foodkiosk – Project | Alitha Pauwels" />
+  <meta property="og:description" content="Een interactieve bestelervaring voor studenten, ontworpen met gebruiksvriendelijkheid en visuele helderheid in gedachten." />
+  <meta property="og:image" content="images/foodkiosk_preview.jpg" />
+  <meta property="og:url" content="https://www.alithapauwels.be/foodkiosk.html" />
+
+  <!-- Hotjar tracking -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:6535040,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
 </head>
+
 <body>
-    <header class="main-header">
-        <nav class="navbar">
-          <a class="logo" href="index.html"><h2 class="logo">apwls.</h2></a>
-      
-          <!-- Hamburger icoon -->
-          <div class="hamburger" id="hamburger">
-            <img src="images/hamburger_4.svg" alt="Menu" />
-          </div>
-      
-          <!-- Navigatielinks -->
-          <ul class="nav-links" id="nav-links">
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#technologies">Technologies</a></li>
-            <li><a href="#about">About me</a></li>
-          </ul>
-        </nav>
-      </header>
-    
+  <!-- HEADER -->
+  <header class="main-header">
+    <nav class="navbar">
+      <a class="logo" href="index.html"><h2 class="logo">apwls.</h2></a>
+
+      <!-- Hamburger icoon -->
+      <div class="hamburger" id="hamburger">
+        <img src="images/hamburger_4.svg" alt="Menu" />
+      </div>
+
+      <!-- Navigatielinks -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#technologies">Technologies</a></li>
+        <li><a href="index.html#about">About me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="project-hero">
+    <h1>Foodkiosk</h1>
+    <p class="subtitle">Een interactieve bestelervaring voor studenten</p>
+    <a href="#project" class="btn">Bekijk het project</a>
+  </section>
+
+
+  <!-- PROJECT CONTENT -->
+  <section id="project" class="project-content">
+    <h2>Over het project</h2>
+    <div class="text">
+      <p>
+        Foodkiosk is een concept waarbij studenten op een campus snel snacks, broodjes en drankjes kunnen bestellen via een digitaal scherm of hun smartphone.
+        De focus lag op gebruiksvriendelijkheid, herkenbare iconen en een duidelijke flow van keuze tot betaling.
+      </p>
+      <p>
+        Tijdens het ontwerpproces heb ik gewerkt aan de user flow, wireframes en het visuele design. 
+        Het doel was om een intuïtieve ervaring te creëren die tijd bespaart en wachtrijen vermindert.
+      </p>
+    </div>
+
+    <!-- MOCKUPS -->
+    <div class="mockups">
+      <div class="mockup-card">
+        <img src="images/foodkiosk_desktop.jpg" alt="Foodkiosk desktop mockup" />
+      </div>
+      <div class="mockup-card">
+        <img src="images/foodkiosk_mobile.jpg" alt="Foodkiosk mobile mockup" />
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Alitha Pauwels – apwls.</p>
+  </footer>
+
+
+  <!-- Optioneel: fade-up animatie -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationDelay = `${i * 0.15}s`;
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

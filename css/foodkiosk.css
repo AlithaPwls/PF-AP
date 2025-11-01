@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* ======= BASIS ======= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #F7F3EF;
+  font-family: "Montserrat", sans-serif;
+  color: #1C1C1C;
+}
+
+
+
+/* ======= HERO ======= */
+.project-hero {
+  text-align: center;
+  background-color: #1C1C1C;
+  color: #F7F3EF;
+  padding: 8rem 2rem 6rem 2rem;
+}
+
+.project-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 0.8rem;
+}
+
+.project-hero .subtitle {
+  color: #B6AFA9;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #6B1E1E;
+  color: #F7F3EF;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #571818;
+}
+
+
+
+/* ======= CONTENT ======= */
+.project-content {
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.project-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #6B1E1E;
+  margin-bottom: 1rem;
+}
+
+.project-content .text p {
+  color: #4E4B45;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+
+
+/* ======= MOCKUPS ======= */
+.mockups {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.mockup-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mockup-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+.mockup-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+
+/* ======= INFO BLOK ======= */
+.info-section {
+  background-color: #F7F3EF;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.info-section h3 {
+  font-family: "Playfair Display", serif;
+  color: #6B1E1E;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.info-section p {
+  color: #4E4B45;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+
+
+/* ======= FOOTER ======= */
+.footer {
+  background-color: #1C1C1C;
+  color: #B6AFA9;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+}
+
