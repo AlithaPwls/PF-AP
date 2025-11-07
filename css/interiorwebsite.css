@@ -218,7 +218,7 @@ body {
 
 /* Hover: inzoomen met depth */
 .visual-grid img:hover {
-  transform: scale(1.9) translateY(-2%);
+  transform: scale(1.7) translateY(-2%);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
   z-index: 3;
 }

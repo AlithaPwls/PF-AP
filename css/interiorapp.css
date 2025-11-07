@@ -1,137 +1,314 @@
-html {
-    scroll-behavior: smooth;
-  }
-  
-  /* ========== RESET ========== */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* ========== BASIS ========== */
-  body {
-    font-family: "Montserrat", sans-serif;
-    color: #1C1C1C;
-    background-color: #F7F3EF;
-    line-height: 1.7;
-  }
-  
-  /* ========== HERO / INTRO ========== */
-  .project-hero {
-    text-align: center;
-    background-color: #1C1C1C;
-    color: #F7F3EF;
-    padding: 8rem 2rem 6rem 2rem;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .project-hero h1 {
-    font-family: "Playfair Display", serif;
-    font-size: 3rem;
-    margin-bottom: 0.8rem;
-  }
-  
-  .project-hero .subtitle {
-    color: #B6AFA9;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .btn {
-    display: inline-block;
-    background-color: #6B1E1E;
-    color: #F7F3EF;
-    padding: 0.9rem 2rem;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    font-weight: 500;
-  }
-  
-  .btn:hover {
-    background-color: #501717;
-  }
-  
-  /* ========== PROJECT CONTENT ========== */
-  .project-content {
-    max-width: 1200px;
-    margin: 6rem auto;
-    padding: 0 2rem;
-    display: flex;
+/* ===== BASIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #F7F3EF;
+  color: #1C1C1C;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+
+/* ===== HERO ===== */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 8rem 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro .subtitle {
+  color: #6B1E1E;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.intro h3 {
+  font-weight: 500;
+  color: #B6AFA9;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  max-width: 500px;
+  margin-bottom: 2rem;
+  color: #4E4B45;
+}
+
+.btn {
+  background-color: #6B1E1E;
+  color: #F7F3EF;
+  padding: 0.9rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #571818;
+  transform: translateY(-3px);
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 45%;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== ABOUT PROJECT ===== */
+.about-project {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-top: 1px solid #E0DBD7;
+}
+
+.about-text {
+  flex: 2;
+  padding: 8rem 10%;
+  background-color: #F7F3EF;
+}
+
+.about-text h2 {
+  font-family: "Playfair Display", serif;
+  color: #6B1E1E;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  color: #4E4B45;
+  margin-bottom: 1.5rem;
+}
+
+.about-side {
+  flex: 1;
+  background-color: #571818;
+  color: #F7F3EF;
+  padding: 8rem 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-side h3 {
+  font-family: "Playfair Display", serif;
+  color: #F7F3EF;
+  margin-top: 1.5rem;
+}
+
+.about-side ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.about-side li::before {
+  content: "• ";
+  color: #F7F3EF;
+}
+
+/* ===== VISUALS ===== */
+.visuals {
+  background-color: #1C1C1C;
+  color: #F7F3EF;
+  text-align: center;
+  padding: 8rem 5% 8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.visuals::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(107,30,30,0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.visuals h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  margin-bottom: 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== MOCKUP GRID ===== */
+.visual-grid {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 3rem;
+  perspective: 1200px;
+  z-index: 2;
+}
+
+/* Basisstijl */
+.mockup {
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.5s ease;
+  will-change: transform;
+}
+
+/* Hoofdmockup (centraal) */
+.mockup.main {
+  width: 230px;
+  z-index: 3;
+  transform: translateY(0) scale(1.05);
+}
+
+/* Linker mockup */
+.mockup.side-left {
+  width: 220px;
+  transform: translateY(10%) rotate(-6deg);
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Rechter mockup */
+.mockup.side-right {
+  width: 220px;
+  transform: translateY(10%) rotate(6deg);
+  opacity: 0.9;
+  z-index: 2;
+}
+
+/* Hover effect – breng de mockup naar voren */
+.mockup:hover {
+  transform: scale(1.2) translateY(-5%);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  opacity: 1;
+}
+
+/* Button */
+.visuals .btn {
+  display: inline-block;
+  margin-top: 6rem; /* 👈 eerder was dit 8em, nu consistente rem */
+  padding: 1rem 2.4rem;
+  border-radius: 40px;
+  background-color: #6B1E1E;
+  color: #F7F3EF;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.visuals .btn:hover {
+  background-color: #571818;
+  transform: scale(1.05);
+}
+
+/* ===== REFLECTIE ===== */
+.reflection {
+  background-color: #F7F3EF;
+  color: #1C1C1C;
+  padding: 8rem 12%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.reflection::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(107,30,30,0.12) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.reflection-inner {
+  max-width: 850px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.reflection h2 {
+  font-family: "Playfair Display", serif;
+  color: #6B1E1E;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
+}
+
+.reflection p {
+  color: #4E4B45;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #1C1C1C;
+  color: #B6AFA9;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .visual-grid {
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
   }
-  
-  .project-content .text {
-    max-width: 700px;
-    text-align: center;
-  }
-  
-  .project-content h2 {
-    font-family: "Playfair Display", serif;
-    font-size: 2.5rem;
-    color: #6B1E1E;
-    margin-bottom: 1rem;
-  }
-  
-  .project-content p {
-    color: #4E4B45;
-    margin-bottom: 1.3rem;
-    font-size: 1rem;
-  }
-  
-  /* ========== MOCKUPS ========== */
-  #mockups {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2.5rem;
 
+  .mockup.main,
+  .mockup.side-left,
+  .mockup.side-right {
+    transform: none;
+    width: 75%;
   }
-  
-  .mockup-card {
-    overflow: hidden;
-    max-width: 200px;
-  }
-  
-  .mockup-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  
 
-  
-  /* ========== FADE-UP ANIMATIE ========== */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(6px);
+  .visuals .btn {
+    margin-top: 3rem;
   }
-  
-  .fade-up.visible {
-    animation: fadeUp 0.8s ease forwards;
-  }
-  
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(6px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* ========== FOOTER ========== */
-  .footer {
-    background-color: #1C1C1C;
-    color: #B6AFA9;
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
-  }
-  
+}

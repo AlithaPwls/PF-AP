@@ -5,27 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interior App – Project | Alitha Pauwels</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/interiorapp.css" />
-
-<!-- Hotjar Tracking Code for https://www.alithapauwels.be -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6535040,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
-
-
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -48,44 +32,86 @@
     </nav>
   </header>
 
+
   <!-- HERO / INTRO -->
-  <section class="project-hero">
-    <h1>Interior App</h1>
-    <p class="subtitle">Een mobiele applicatie die interieurinspiratie combineert met functionaliteit.</p>
-    <a href="#mockups" target="_blank" class="btn">Bekijk de app</a>
+  <section class="intro">
+    <div class="intro-text">
+      <p class="subtitle">Project Highlight</p>
+      <h1>Interior App</h1>
+      <h3>Mobile experience for modern interior lovers</h3>
+      <p>
+        De Interior App vertaalt het verfijnde webdesign naar een mobiele ervaring.
+        Gebruikers kunnen favorieten opslaan, collecties ontdekken en hun eigen stijl personaliseren — allemaal binnen een intuïtieve interface die rust en elegantie ademt.
+      </p>
+      <a href="#visuals" class="btn">Bekijk de app</a>
+    </div>
+
+    <div class="intro-image">
+      <img src="images/mobile-app-mockup-1.png" alt="Interior App preview" />
+    </div>
   </section>
 
-  <!-- PROJECT DETAILS -->
-  <section class="project-content">
-    <div class="text">
+  <!-- ABOUT PROJECT -->
+  <section class="about-project">
+    <div class="about-text">
       <h2>Over het project</h2>
       <p>
-        De Interior App is ontworpen als een verlengstuk van de interieurwebsite, maar dan met de focus op mobiel gebruik.  
-        Gebruikers kunnen favoriete producten opslaan, inspiratie ontdekken en collecties personaliseren via een overzichtelijke en elegante interface.
+        Dit project ontstond als mobiele uitbreiding van de <strong>Interior Website</strong>.
+        De uitdaging was om de merkstijl te behouden, maar de ervaring te optimaliseren voor mobiel gebruik.
+        We kozen voor een minimalistische interface met zachte animaties en duidelijke interactiepunten.
       </p>
       <p>
-        Het doel was om een rustige, intuïtieve ervaring te creëren waarin visuele beleving en eenvoud centraal staan.
-        De app gebruikt zachte kleuren, typografie met karakter en een gestroomlijnde navigatie die de merkstijl versterkt.
+        De app stimuleert exploratie: gebruikers kunnen door producten scrollen met vloeiende overgangen, visuele filters toepassen
+        en direct hun favorieten beheren. Elk scherm is ontworpen met evenwicht tussen typografie, witruimte en beeld.
       </p>
     </div>
 
-    <div id="mockups">
-      <div class="mockup-card">
-        <img src="images/mobile-app-mockup-1.png" alt="Mockup van de homepagina van de Interior App" />
-      </div>
-      <div class="mockup-card">
-        <img src="images/mobile-app-mockup-2.png" alt="Mockup van favorietenpagina van de Interior App" />
-      </div>
-      <div class="mockup-card">
-        <img src="images/mobile-app-mockup-3.png" alt="Mockup van productdetailpagina van de Interior App" />
-      </div>
+    <div class="about-side">
+      <h3>Mijn rol</h3>
+      <ul>
+        <li>UX Research & UI Design</li>
+        <li>Mobile prototyping</li>
+        <li>Micro-animaties & component setup</li>
+      </ul>
+
+      <h3>Tools - Technologieën</h3>
+      <p>Figma, Webflow, React Native, CSS animations</p>
+    </div>
+  </section>
+
+  <!-- VISUALS -->
+  <section class="visuals" id="visuals">
+    <h2>Visuals</h2>
+    <div class="visual-grid">
+      <img class="mockup side-left" src="images/mobile-app-mockup-2.png" alt="App overzicht">
+      <img class="mockup main" src="images/mobile-app-mockup-1.png" alt="App detailpagina">
+      <img class="mockup side-right" src="images/mobile-app-mockup-3.png" alt="App favorietenpagina">
+    </div>
+    <a href="interiorwebsite.html" target="_blank" class="btn">Bekijk de bijhorende website</a>
+  </section>
+  
+
+  <!-- REFLECTIE -->
+  <section class="reflection">
+    <div class="reflection-inner">
+      <h2>Reflectie</h2>
+      <p>
+        Deze app leerde me ontwerpen met de beperking van een kleiner scherm, maar met evenveel aandacht voor merkgevoel.
+        Door te werken met micro-animaties en balans tussen beeld en tekst, begreep ik beter hoe subtiele bewegingen de
+        <em>perceived quality</em> van een merk kunnen versterken. 
+      </p>
+      <p>
+        Ik ontdekte ook hoe belangrijk het is om een visuele identiteit consistent te vertalen over verschillende platformen.
+        De *Interior App* voelt vertrouwd, maar biedt tegelijk een nieuwe, tastbare ervaring.
+      </p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Alitha Pauwels. All rights reserved.</p>
+    <p>© 2025 Alitha Pauwels</p>
   </footer>
 
+  <script src="scripts/project-effects.js"></script>
 </body>
 </html>
