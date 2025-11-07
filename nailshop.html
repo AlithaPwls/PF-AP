@@ -13,22 +13,9 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/nailshop.css" />
-
-  <!-- Hotjar Tracking Code -->
-  <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6535040,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
 </head>
 
 <body>
-
   <!-- HEADER -->
   <header class="main-header">
     <nav class="navbar">
@@ -49,59 +36,85 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="project-hero">
-    <h1>Nailshop</h1>
-    <p class="subtitle">Een online webshop met filters, database en productbeheer.</p>
-    <a href="#demo" class="btn">Bekijk de demo</a>
-  </section>
 
-  <!-- PROJECT CONTENT -->
-  <section class="project-content">
-    <div class="text">
-      <h2>Over het project</h2>
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-text">
+      <p class="subtitle">Project Highlight</p>
+      <h1>Nailshop</h1>
+      <h3>Elegant, functioneel & volledig op maat gebouwd</h3>
       <p>
-        Voor deze opdracht heb ik een online webshop ontwikkeld voor nagelproducten. 
-        De nadruk lag op het bouwen van een functionele winkelervaring met een moderne en gebruiksvriendelijke interface.
+        De Nailshop is een moderne webshop voor nagelproducten, gebouwd met een focus op gebruiksvriendelijkheid, overzicht en stijl.
+        Gebruikers kunnen producten zoeken, filteren en sorteren — ondersteund door een eigen database en API.
       </p>
-      <p>
-        De webshop is verbonden met een database, waarin alle producten, categorieën en prijzen worden opgeslagen. 
-        Gebruikers kunnen producten filteren, zoeken en sorteren – net zoals in een echte e-commerce omgeving.
-      </p>
-      <p>
-        Dit project combineert zowel frontend als backend: de data komt via een eigen API, en de interface is ontworpen 
-        in lijn met de rustige, elegante stijl die past bij mijn andere interieurprojecten.
-      </p>
+      <a href="#visuals" class="btn">Bekijk de demo</a>
     </div>
 
+    <div class="intro-image">
+      <img src="images/mockup-nailshop.png" alt="Nailshop website preview" />
+    </div>
+  </section>
 
-    <!-- VIDEO -->
-    <div id="demo" class="video-container fade-up">
-      <video controls poster="images/nailshop-thumbnail.jpg">
+  <!-- ABOUT PROJECT -->
+  <section class="about-project">
+    <div class="about-text">
+      <h2>Over het project</h2>
+      <p>
+        Dit project combineert frontend en backend. Alle producten, categorieën en prijzen worden opgehaald uit een MySQL-database via een PHP-API.
+        De focus lag op een intuïtieve flow en visuele consistentie met mijn interieurprojecten.
+      </p>
+      <p>
+        De webshop bevat zoek- en filterfunctionaliteit, een productdetailpagina en een winkelmandje — elk ontworpen met aandacht voor gebruiksgemak en visuele rust.
+      </p>
+    </div>
+    <div class="about-side">
+      <h3>Mijn rol</h3>
+      <ul>
+        <li>UX/UI Design</li>
+        <li>Frontend (HTML, CSS, JS)</li>
+        <li>Backend (PHP, MySQL)</li>
+      </ul>
+      <h3>Tools - Technologieën</h3>
+      <p>Figma, PHP, MySQL, JavaScript, Webflow</p>
+    </div>
+  </section>
+
+  <!-- VISUALS / VIDEO -->
+  <section class="visuals" id="visuals">
+    <h2>Visuals</h2>
+    <div class="visual-grid">
+      <video controls muted playsinline poster="images/nailshop-thumbnail.jpg">
         <source src="videos/nailshop-php.mp4" type="video/mp4">
         Je browser ondersteunt deze video niet.
       </video>
+      
+    </div>
+    <a href="index.html#projects" class="btn">Bekijk mijn andere projecten</a>
+  </section>
+
+  <!-- REFLECTIE -->
+  <section class="reflection">
+    <div class="reflection-inner">
+      <h2>Reflectie</h2>
+      <p>
+        Door dit project leerde ik hoe belangrijk het is om de brug te slaan tussen design en development. 
+        Het bouwen van een database-gestuurde webshop gaf me een beter inzicht in hoe data, code en UI samenwerken.
+      </p>
+      <p>
+        De grootste uitdaging was het balanceren van functionaliteit en visuele rust. 
+        Ik wilde een interface die professioneel aanvoelt, zonder haar speelse karakter te verliezen. 
+        Dit project liet me vooral groeien in het schrijven van gestructureerde code en het vertalen van design naar logica.
+      </p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Alitha Pauwels. All rights reserved.</p>
+    <p>© 2025 Alitha Pauwels</p>
   </footer>
 
-  <!-- ANIMATIE -->
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationDelay = `${i * 0.15}s`;
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
-
+  <!-- JS -->
+  <script src="scripts/project-effects.js"></script>
+  <script src="scripts/nailshop.js"></script>
 </body>
 </html>
