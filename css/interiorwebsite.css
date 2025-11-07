@@ -1,108 +1,243 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap');
-
-/* ======= BASIS ======= */
-html {
-  scroll-behavior: smooth;
+/* ===== BASIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #F7F3EF;
+  color: #1C1C1C;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
 
-
-/* ======= HERO ======= */
-.project-hero {
-  text-align: center;
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #1C1C1C;
   color: #F7F3EF;
-  padding: 8rem 2rem 6rem 2rem;
+  padding: 1.2rem 8%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.project-hero h1 {
+.logo {
   font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
 }
 
-.project-hero .subtitle {
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.header a {
+  color: #F7F3EF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header a:hover {
   color: #B6AFA9;
-  font-size: 1.2rem;
+}
+
+/* ===== INTRO ===== */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 8rem 10%;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro .subtitle {
+  color: #6B1E1E;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.intro h3 {
+  font-weight: 500;
+  color: #B6AFA9;
+  margin-bottom: 1.5rem;
+}
+
+.intro p {
+  max-width: 500px;
   margin-bottom: 2rem;
+  color: #4E4B45;
 }
 
 .btn {
-  display: inline-block;
   background-color: #6B1E1E;
   color: #F7F3EF;
   padding: 0.9rem 2rem;
   border-radius: 40px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: #571818;
+  transform: translateY(-3px);
 }
 
-/* ======= CONTENT ======= */
-.project-content {
-  max-width: 1100px;
-  margin: 6rem auto;
-  padding: 0 2rem;
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-.project-content h2 {
+.intro-image img {
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== ABOUT PROJECT ===== */
+.about-project {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 8rem 10%;
+  border-top: 1px solid #E0DBD7;
+}
+
+.about-text {
+  flex: 2;
+}
+
+.about-text h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
   color: #6B1E1E;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-.project-content .text p {
+.about-text p {
   color: #4E4B45;
   margin-bottom: 1.5rem;
-  text-align: justify;
 }
 
-/* ======= MOCKUPS ======= */
-.mockups {
-  display: flex;
-  flex-direction: row;
-  margin-top: 3rem;
-  
+.about-side {
+  flex: 1;
 }
 
-.mockup-card {
-    background: #fff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    position: relative; /* Added for positioning */
-
+.about-side h3 {
+  font-family: "Playfair Display", serif;
+  color: #1C1C1C;
+  margin-top: 1.5rem;
 }
 
-.mockup-card-desktop img {
-        max-width: 50%;
-        height: auto;
-        display: block;
+.about-side ul {
+  list-style: none;
+  margin-bottom: 2rem;
 }
 
-.mockup-card-mobile {
-        position: absolute; /* Added for overlapping */
-        top: 105%; /* Adjust as needed */
-        left: 54%; /* Center horizontally */
-        transform: translateX(-50%); /* Center adjustment */
+.about-side li::before {
+  content: "• ";
+  color: #6B1E1E;
 }
 
-.mockup-card-mobile img {
-        max-width: 37%;
-        height: auto;
-        display: block;
+/* ===== VISUALS ===== */
+.visuals {
+  background-color: #1C1C1C;
+  color: #F7F3EF;
+  text-align: center;
+  padding: 8rem 10%;
 }
 
-/* ========== FOOTER ========== */
+.visuals h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 3rem;
+}
+
+.visual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.visual-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+
+.visual-grid img:hover {
+  transform: scale(1.04);
+}
+
+/* ===== REFLECTIE ===== */
+.reflection {
+  background-color: #6B1E1E;
+  color: #F7F3EF;
+  text-align: center;
+  padding: 8rem 10%;
+}
+
+.reflection h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 1.5rem;
+}
+
+.reflection p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Subtiele 3D effect bij hover */
+.btn {
+  will-change: transform;
+}
+
+/* Glow animatie laag */
+.intro {
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ===== FOOTER ===== */
 .footer {
-    background-color: #1C1C1C;
-    color: #B6AFA9;
+  background-color: #1C1C1C;
+  color: #B6AFA9;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .intro, .about-project {
+    flex-direction: column;
     text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
   }
-  
+  .intro-image img {
+    width: 100%;
+  }
+}

@@ -4,39 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interior Website – Project | Alitha Pauwels</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/interiorwebsite.css" />
-<!-- Hotjar Tracking Code for https://www.alithapauwels.be -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:6535040,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+  <link rel="stylesheet" href="css/navbar.css" />
 </head>
+
 <body>
 
   <!-- HEADER -->
-  <header class="main-header">
-    <nav class="navbar">
-      <a class="logo" href="index.html"><h2 class="logo">apwls.</h2></a>
-  
-      <!-- Hamburger icoon -->
-      <div class="hamburger" id="hamburger">
-        <img src="images/hamburger_4.svg" alt="Menu" />
-      </div>
-  
-      <!-- Navigatielinks -->
-      <ul class="nav-links" id="nav-links">
+  <header class="header">
+    <h2 class="logo">apwls.</h2>
+    <nav>
+      <ul>
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="index.html#skills">Skills</a></li>
         <li><a href="index.html#technologies">Technologies</a></li>
@@ -45,41 +24,73 @@
     </nav>
   </header>
 
-  <!-- HERO / INTRO -->
-  <section class="project-hero">
-    <h1>Interior Website</h1>
-    <p class="subtitle">Een moderne interieurwebsite met focus op esthetiek en eenvoud.</p>
-    <a href="https://alitha-pauwels---mobile-development.webflow.io" target="_blank" class="btn">Bezoek de website</a>
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-text">
+      <p class="subtitle">Project Highlight</p>
+      <h1>Interior Website</h1>
+      <h3>Modern, minimal & visually balanced</h3>
+      <p>
+        Een moderne interieurwebsite die rust, elegantie en eenvoud uitstraalt.
+        Dit project combineert UX/UI-design, front-end ontwikkeling en een sterke merkidentiteit.
+      </p>
+      <a href="https://alitha-pauwels---mobile-development.webflow.io" target="_blank" class="btn">Bekijk live website</a>
+    </div>
+    <div class="intro-image">
+      <img src="images/mockup-website.png" alt="Interior Website Mockup">
+    </div>
   </section>
 
-  <!-- PROJECT DETAILS -->
-  <section class="project-content">
-    <div class="text">
+  <!-- ABOUT PROJECT -->
+  <section class="about-project">
+    <div class="about-text">
       <h2>Over het project</h2>
       <p>
-        Deze opdracht draaide rond het ontwerpen van een gebruiksvriendelijke en visueel aantrekkelijke website voor een interieurbedrijf.  
-        De focus lag op eenvoud, rust en een luxueuze uitstraling die aansluit bij de merkidentiteit.
+        Deze opdracht draaide rond het ontwerpen van een gebruiksvriendelijke en visueel aantrekkelijke website voor een interieurbedrijf.
+        De uitdaging was om een luxueuze, maar toegankelijke look te creëren die vertrouwen uitstraalt en tegelijk intuïtief blijft.
       </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac diam vel mi tincidunt dapibus.
-        Het doel was om een duidelijke structuur te creëren waarin bezoekers eenvoudig doorheen producten en inspiratiepagina’s kunnen navigeren.
+        Ik werkte aan het concept, de UX-structuur en de volledige front-end uitwerking in Webflow. 
+        Door subtiele micro-animaties en typografische contrasten toe te voegen, kreeg de website een dynamische, maar kalme uitstraling.
       </p>
     </div>
+    <div class="about-side">
+      <h3>Mijn rol</h3>
+      <ul>
+        <li>UX/UI Design</li>
+        <li>Front-end development</li>
+        <li>Designsystem & structuur</li>
+      </ul>
+      <h3>Tools & Technologieën</h3>
+      <p>Figma, Webflow, HTML, CSS, JavaScript</p>
+    </div>
+  </section>
 
-    <div class="mockups">
-      <div class="mockup-card-desktop">
-        <img src="images/mockup-website.png" alt="Desktop mockup van Interior Website" />
-      </div>
-      <div class="mockup-card-mobile">
-        <img src="images/mockups-web-mobile.webp" alt="Mobile mockup van Interior Website" />
-      </div>
+  <!-- FEATURED VISUALS -->
+  <section class="visuals">
+    <h2>Visuals</h2>
+    <div class="visual-grid">
+      <img src="images/mockup-website.png" alt="Desktop view">
+      <img src="images/mockups-web-mobile.webp" alt="Mobile view">
+    </div>
+  </section>
+
+  <!-- REFLECTIE -->
+  <section class="reflection">
+    <div class="reflection-inner">
+      <h2>Reflectie</h2>
+      <p>
+        Dit project leerde me het belang van visuele hiërarchie en consistentie in digitale ontwerpen.
+        Door design en development te combineren, begreep ik beter hoe details – spacing, contrast en beweging – de ervaring bepalen.
+      </p>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Alitha Pauwels. All rights reserved.</p>
+    <p>© 2025 Alitha Pauwels</p>
   </footer>
 
+  <script src="scripts/project-effects.js"></script>
 </body>
 </html>
