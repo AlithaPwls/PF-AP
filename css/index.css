@@ -46,41 +46,114 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
+/* Gloed-achtergrond */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(107, 30, 30, 0.35), transparent 60%);
+  z-index: 0; /* 👈 belangrijk: glow achter de tekst */
 }
 
+/* Zorg dat tekst zichtbaar is */
+.hero-text {
+  position: relative;
+  z-index: 2; /* 👈 tekst boven overlay */
+}
+
+/* Titel */
 .hero h1 {
   font-size: 4rem;
-  z-index: 1;
   position: relative;
+  z-index: 2;
 }
 
+/* Fonetische uitspraak */
 .phonetic {
   color: #B6AFA9;
   font-style: italic;
-  margin-top: 0.5rem;
+  position: absolute;
+  right: 425px;
+  top: 9px;
 }
 
+/* Ondertitel */
 .hero h2 {
   font-size: 1.3rem;
   letter-spacing: 2px;
-  margin-top: 2rem;
+  margin-top: 0.3rem;
   text-transform: uppercase;
   color: #B6AFA9;
 }
 
+/* Tagline – fade in */
 .tagline {
-  margin-top: 1rem;
+  margin-top: 7rem;
   font-size: 1rem;
   color: #B6AFA9;
   font-style: italic;
   opacity: 0;
   animation: fadeIn 2.5s ease 1.5s forwards;
 }
+
+/* Knop */
+.hero-btn {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 1rem 2.6rem;
+  background-color: #6B1E1E;
+  color: #F7F3EF;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  border-radius: 40px;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 2s ease 2.3s forwards, pulse 3s infinite ease-in-out;
+}
+
+/* Subtiele glow */
+.hero-btn::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 180%;
+  height: 180%;
+  background: radial-gradient(circle, rgba(107, 30, 30, 0.35) 0%, transparent 70%);
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.hero-btn:hover {
+  background-color: #571818;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(107, 30, 30, 0.4);
+}
+
+.hero-btn:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Pulse animatie */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 rgba(107,30,30,0.5); }
+  50% { box-shadow: 0 0 18px rgba(107,30,30,0.4); }
+  100% { box-shadow: 0 0 0 rgba(107,30,30,0.5); }
+}
+
+/* FadeIn animatie */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 /* ========== PROJECTS ========== */
 #projects {
