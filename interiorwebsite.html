@@ -12,12 +12,19 @@
 <body>
 
   <!-- HEADER -->
-  <header class="header">
-    <h2 class="logo">apwls.</h2>
-    <nav>
-      <ul>
+  <header class="main-header">
+    <nav class="navbar">
+      <a class="logo" href="index.html"><h2 class="logo">apwls.</h2></a>
+  
+      <!-- Hamburger icoon -->
+      <div class="hamburger" id="hamburger">
+        <img src="images/hamburger_4.svg" alt="Menu" />
+      </div>
+  
+      <!-- Navigatielinks -->
+      <ul class="nav-links" id="nav-links">
         <li><a href="index.html#projects">Projects</a></li>
-        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.htmk#skills">Skills</a></li>
         <li><a href="index.html#technologies">Technologies</a></li>
         <li><a href="index.html#about">About me</a></li>
       </ul>
@@ -61,7 +68,7 @@
         <li>Front-end development</li>
         <li>Designsystem & structuur</li>
       </ul>
-      <h3>Tools & Technologieën</h3>
+      <h3>Tools - Technologieën</h3>
       <p>Figma, Webflow, HTML, CSS, JavaScript</p>
     </div>
   </section>
@@ -70,22 +77,30 @@
   <section class="visuals">
     <h2>Visuals</h2>
     <div class="visual-grid">
-      <img src="images/mockup-website.png" alt="Desktop view">
-      <img src="images/mockups-web-mobile.webp" alt="Mobile view">
+      <img class="desktopimg" src="images/mockup-website.png" alt="Desktop view">
+      <img class="mobileimg" src="images/mockups-web-mobile.webp" alt="Mobile view">
     </div>
+
+    <a href="https://alitha-pauwels---mobile-development.webflow.io" target="_blank" class="btn">Bekijk live website</a>
   </section>
 
-  <!-- REFLECTIE -->
-  <section class="reflection">
-    <div class="reflection-inner">
-      <h2>Reflectie</h2>
-      <p>
-        Dit project leerde me het belang van visuele hiërarchie en consistentie in digitale ontwerpen.
-        Door design en development te combineren, begreep ik beter hoe details – spacing, contrast en beweging – de ervaring bepalen.
-      </p>
-    </div>
-  </section>
-
+<!-- REFLECTIE -->
+<section class="reflection">
+  <div class="reflection-inner">
+    <h2>Reflectie</h2>
+    <p>
+      Tijdens dit project ontdekte ik hoe belangrijk de balans is tussen designesthetiek en gebruiksvriendelijkheid.  
+      In het begin lag mijn focus vooral op het visuele aspect — kleuren, typografie en sfeer — maar gaandeweg merkte ik hoe cruciaal structuur, consistentie en hiërarchie zijn om de gebruiker intuïtief te begeleiden.
+    </p>
+    <p>
+      Door zelf zowel het design als de front-end uitwerking te doen, kreeg ik een beter begrip van hoe ontwerpbeslissingen rechtstreeks invloed hebben op de technische uitvoering.  
+      Kleine details zoals spacing, micro-animaties en contrast hebben een grote impact op hoe een interface aanvoelt.
+    </p>
+    <p>
+      Dit project bevestigde voor mij dat ik het meest tot mijn recht kom in de combinatie van design en development — het vertalen van een idee naar een tastbare, verfijnde digitale ervaring.
+    </p>
+  </div>
+</section>
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2025 Alitha Pauwels</p>
