@@ -3,46 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foodkiosk – Project | Alitha Pauwels</title>
-
-  <!-- Fonts & CSS -->
-  <link rel="stylesheet" href="css/navbar.css">
-  <link rel="stylesheet" href="css/foodkiosk.css">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="nl_BE" />
-  <meta property="og:site_name" content="Alitha Pauwels" />
-  <meta property="og:title" content="Foodkiosk – Project | Alitha Pauwels" />
-  <meta property="og:description" content="Een interactieve bestelervaring voor studenten, ontworpen met gebruiksvriendelijkheid en visuele helderheid in gedachten." />
-  <meta property="og:image" content="images/foodkiosk_preview.jpg" />
-  <meta property="og:url" content="https://www.alithapauwels.be/foodkiosk.html" />
-
-  <!-- Hotjar tracking -->
-  <script>
-    (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:6535040,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-  </script>
+  <title>Food Kiosk – Project | Alitha Pauwels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/foodkiosk.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
 </head>
 
 <body>
+
   <!-- HEADER -->
   <header class="main-header">
     <nav class="navbar">
       <a class="logo" href="index.html"><h2 class="logo">apwls.</h2></a>
 
-      <!-- Hamburger icoon -->
       <div class="hamburger" id="hamburger">
         <img src="images/hamburger_4.svg" alt="Menu" />
       </div>
 
-      <!-- Navigatielinks -->
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="index.html#skills">Skills</a></li>
@@ -52,61 +29,90 @@
     </nav>
   </header>
 
-
-  <!-- HERO -->
-  <section class="project-hero">
-    <h1>Foodkiosk</h1>
-    <p class="subtitle">Een interactieve bestelervaring voor studenten</p>
-    <a href="#project" class="btn">Bekijk het project</a>
-  </section>
-
-
-  <!-- PROJECT CONTENT -->
-  <section id="project" class="project-content">
-    <h2>Over het project</h2>
-    <div class="text">
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="intro-text">
+      <p class="subtitle">Project Highlight</p>
+      <h1>Food Kiosk</h1>
+      <h3>Digitale bestelervaring met focus op gebruiksgemak</h3>
       <p>
-        Foodkiosk is een concept waarbij studenten op een campus snel snacks, broodjes en drankjes kunnen bestellen via een digitaal scherm of hun smartphone.
-        De focus lag op gebruiksvriendelijkheid, herkenbare iconen en een duidelijke flow van keuze tot betaling.
+        Een interactieve bestelervaring die klanten toelaat snel en intuïtief hun bestelling te plaatsen.
+        Het ontwerp focust op duidelijke navigatie, heldere visuals en een consistente merkstijl.
       </p>
-      <p>
-        Tijdens het ontwerpproces heb ik gewerkt aan de user flow, wireframes en het visuele design. 
-        Het doel was om een intuïtieve ervaring te creëren die tijd bespaart en wachtrijen vermindert.
-      </p>
+      <a href="#visuals" class="btn">Bekijk visuals</a>
     </div>
-
-    <!-- MOCKUPS -->
-    <div class="mockups">
-      <div class="mockup-card">
-        <img src="images/foodkiosk_desktop.jpg" alt="Foodkiosk desktop mockup" />
-      </div>
-      <div class="mockup-card">
-        <img src="images/foodkiosk_mobile.jpg" alt="Foodkiosk mobile mockup" />
-      </div>
+    <div class="intro-image">
+      <img src="images/render4-light-spot.png" alt="Food Kiosk Mockup">
     </div>
   </section>
 
+  <!-- ABOUT PROJECT -->
+  <section class="about-project">
+    <div class="about-text">
+      <h2>Over het project</h2>
+      <p>
+        Dit project onderzoekt hoe digitale kiosken de wachttijd kunnen verminderen en het bestelproces kunnen optimaliseren.
+        Met een duidelijke interface, herkenbare categorieën en visuele feedback wordt de ervaring intuïtief en efficiënt.
+      </p>
+      <p>
+        Ik werkte aan de volledige UX-flow, wireframes en het visuele design in Figma.  
+        De focus lag op contrast, hiërarchie en het creëren van een logische navigatiestructuur.
+      </p>
+    </div>
+    <div class="about-side">
+      <h3>Mijn rol</h3>
+      <ul>
+        <li>UX/UI Design</li>
+        <li>Prototype ontwikkeling</li>
+        <li>Usability testing</li>
+      </ul>
 
+      <h3>Tools - Technologieën</h3>
+      <p>Figma, Webflow, HTML, CSS, JavaScript</p>
+    </div>
+  </section>
 
+  <!-- FEATURED VISUALS -->
+  <section class="visuals" id="visuals">
+    <h2>Visuals</h2>
+    <div class="visual-grid">
+           <div class="video-preview">
+        <video autoplay muted loop playsinline>
+          <source src="videos/0001-0100.mp4" type="video/mp4">
+          Je browser ondersteunt geen video tag.
+        </video> 
+        
+        <img class="desktopimg" src="images/foodkiosk-render-pf.png" alt="Desktop view">
+      <!-- VIDEO PREVIEW -->
 
+        <img class="desktopimg" src="images/foodkiosk_Alitha_Pauwels.png" alt="Desktop view">
+      </div>
+    </div>
+
+    <a href="index.html#projects" target="_blank" class="btn">Bekijk mijn andere projecten</a>
+  </section>
+
+  <!-- REFLECTIE -->
+  <section class="reflection">
+    <div class="reflection-inner">
+      <h2>Reflectie</h2>
+      <p>
+        Tijdens dit project heb ik vooral geleerd hoe belangrijk experimenteren is binnen 3D-ontwerp.
+        Het was niet enkel een oefening in het maken van een foodkiosk, maar vooral in het spelen met licht, materialen en compositie. Door verschillende soorten licht en camerahoeken te testen, ontdekte ik hoe sterk sfeer en diepte het eindresultaat beïnvloeden. </p>
+<br>
+       <p>  Ook het werken met texturen en vormen leerde me meer over realisme en balans in een digitale scène. Sommige materialen reageerden onverwacht op licht, wat me uitdaagde om verder te zoeken naar subtiele nuances die het geheel geloofwaardiger maakten.
+        Tot slot gaf het toevoegen van lichte animaties — zoals kleine bewegingen of reflecties — de kiosk extra leven. </p> <br>
+        <p> Deze oefening heeft me niet alleen technische kennis bijgebracht, maar ook mijn oog voor detail en visuele storytelling versterkt.
+      </p>
+
+    </div>
+  </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Alitha Pauwels – apwls.</p>
+    <p>© 2025 Alitha Pauwels</p>
   </footer>
 
-
-  <!-- Optioneel: fade-up animatie -->
-  <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          entry.target.style.animationDelay = `${i * 0.15}s`;
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+  <script src="scripts/project-effects.js"></script>
 </body>
 </html>

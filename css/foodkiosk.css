@@ -1,136 +1,282 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
-/* ======= BASIS ======= */
+/* ===== BASIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  background-color: #F7F3EF;
   font-family: "Montserrat", sans-serif;
+  background-color: #F7F3EF;
   color: #1C1C1C;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+/* ===== INTRO ===== */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem; /* kleiner gat voor betere balans */
+  padding: 11rem 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* centreren in zijn kolom */
 }
 
 
-
-/* ======= HERO ======= */
-.project-hero {
-  text-align: center;
-  background-color: #1C1C1C;
-  color: #F7F3EF;
-  padding: 8rem 2rem 6rem 2rem;
+.intro .subtitle {
+  color: #6B1E1E;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.project-hero h1 {
+.intro h1 {
   font-family: "Playfair Display", serif;
-  font-size: 3rem;
-  margin-bottom: 0.8rem;
+  font-size: 3.2rem;
+  margin: 1rem 0 0.5rem;
 }
 
-.project-hero .subtitle {
+.intro h3 {
+  font-weight: 500;
   color: #B6AFA9;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
+.intro p {
+  max-width: 500px;
+  margin-bottom: 2rem;
+  color: #4E4B45;
+}
+
+.intro img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+  object-fit: contain;
+}
+
+/* ===== BUTTONS ===== */
 .btn {
-  display: inline-block;
   background-color: #6B1E1E;
   color: #F7F3EF;
   padding: 0.9rem 2rem;
   border-radius: 40px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 .btn:hover {
   background-color: #571818;
+  transform: translateY(-3px);
 }
 
-
-
-/* ======= CONTENT ======= */
-.project-content {
-  max-width: 1100px;
-  margin: 6rem auto;
-  padding: 0 2rem;
+/* ===== ABOUT PROJECT ===== */
+.about-project {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #E0DBD7;
 }
 
-.project-content h2 {
+.about-text {
+  flex: 2;
+  padding: 8rem 10%;
+}
+
+.about-text h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
   color: #6B1E1E;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  color: #4E4B45;
+  margin-bottom: 1.5rem;
+}
+
+.about-side {
+  flex: 1;
+  background-color: #571818;
+  color: #F7F3EF;
+  padding: 8rem 5%;
+}
+
+.about-side h3 {
+  font-family: "Playfair Display", serif;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
 
-.project-content .text p {
-  color: #4E4B45;
-  margin-bottom: 1.5rem;
-  text-align: justify;
+.about-side ul {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
 }
 
+.about-side li::before {
+  content: "• ";
+  color: #F7F3EF;
+}
 
+/* ===== VISUALS ===== */
+.visuals {
+  background-color: #1C1C1C;
+  color: #F7F3EF;
+  text-align: center;
+  padding: 6rem 5% 9rem;
+  position: relative;
+}
 
-/* ======= MOCKUPS ======= */
-.mockups {
+.visuals h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+/* GRID LAYOUT VOOR AFBEELDING + VIDEO */
+.visual-grid {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 3rem;
-  margin-top: 3rem;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.mockup-card {
-  background: #fff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.mockup-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-}
-
-.mockup-card img {
-  display: block;
-  width: 100%;
-  height: auto;
+.desktopimg,
+.video-preview video {
+  width: 42%;
+  max-width: 700px;
+  padding: 1em;
+  border-radius: 18px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 
+.mobileimg {
+  display: none; /* niet nodig bij deze layout */
+}
 
-/* ======= INFO BLOK ======= */
-.info-section {
+.visuals .btn {
+  display: inline-block;
+  margin-top: 4rem; /* of 400px als je dat echt wil */
+}
+/* ===== REFLECTIE ===== */
+.reflection {
   background-color: #F7F3EF;
-  padding: 4rem 2rem;
+  padding: 8rem 12%;
+  position: relative;
+}
+
+.reflection::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(107,30,30,0.12) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.reflection-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.reflection h2 {
+  font-family: "Playfair Display", serif;
+  color: #6B1E1E;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  letter-spacing: 0.5px;
   text-align: center;
 }
 
-.info-section h3 {
-  font-family: "Playfair Display", serif;
-  color: #6B1E1E;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.info-section p {
+.reflection p {
   color: #4E4B45;
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  line-height: 1.6;
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
-
-
-/* ======= FOOTER ======= */
+/* ===== FOOTER ===== */
 .footer {
   background-color: #1C1C1C;
   color: #B6AFA9;
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem;
   font-size: 0.9rem;
 }
 
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+    padding: 10rem 6%;
+  }
+
+  .intro img {
+    width: 80%;
+  }
+
+  .about-project {
+    flex-direction: column;
+  }
+
+  .about-text, .about-side {
+    padding: 5rem 8%;
+  }
+
+  .visual-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .desktopimg,
+  .video-preview video {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .reflection {
+    padding: 6rem 8%;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .visuals h2 {
+    font-size: 2rem;
+  }
+
+  .reflection h2 {
+    font-size: 1.8rem;
+  }
+}
