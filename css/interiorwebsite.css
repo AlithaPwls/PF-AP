@@ -247,6 +247,8 @@ body {
 
 
 
+
+
 /* ===== REFLECTIE ===== */
 .reflection {
   background-color: #F7F3EF;
@@ -314,24 +316,32 @@ body {
   padding: 2rem;
   font-size: 0.9rem;
 }
+.footer {
+  font-size: 0.8rem; /* Adjust font size for mobile */
+  padding: 1.5rem; /* Reduce padding for mobile */
+}
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .visual-grid {
-    flex-direction: column;
-    gap: 2rem;
-    min-height: auto;
-  }
+.intro {
+  flex-direction: column; /* Stack elements vertically */
+  padding: 8rem 5%; /* Adjust padding for mobile */
+}
 
-  .desktopimg,
-  .mobileimg {
-    position: static;
-    width: 100%;
-    max-width: 400px;
-    transform: none;
-  }
+.intro-image img {
+  width: 100%; /* Make image responsive */
+}
 
-  .visuals .btn {
-    margin-top: 3rem;
-  }
+.about-text, .about-side {
+  padding: 4rem 5%; /* Adjust padding for mobile */
+}
+
+.visuals h2 {
+  font-size: 2rem; /* Adjust heading size for mobile */
+}
+
+.reflection h2 {
+  font-size: 1.8rem; /* Adjust heading size for mobile */
+}
+
+.reflection p {
+  font-size: 0.95rem; /* Adjust paragraph size for mobile */
 }
