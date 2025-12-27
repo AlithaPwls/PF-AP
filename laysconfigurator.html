@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lay’s Chips Configurator – Project | Alitha Pauwels</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/nailshop.css" />
+
+  <!-- Hotjar -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:6607828,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
+  <!-- Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "ur7gsokj3s");
+  </script>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="main-header">
+  <nav class="navbar">
+    <a class="logo" href="index.html"><h2 class="logo">apwls.</h2></a>
+
+    <div class="hamburger" id="hamburger">
+      <img src="images/hamburger_4.svg" alt="Menu" />
+    </div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#technologies">Technologies</a></li>
+      <li><a href="index.html#about">About me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-text">
+    <p class="subtitle">Project Highlight</p>
+    <h1>Lay’s Chips Configurator</h1>
+    <h3>Interactieve 3D productervaring</h3>
+    <p>
+      De Lay’s Chips Configurator is een interactieve webervaring waarin gebruikers hun eigen chipsverpakking kunnen samenstellen.
+      Via een intuïtieve interface passen ze kleur, titel, smaak en typografie aan en zien ze hun ontwerp live verschijnen op een 3D-model.
+    </p>
+    <a href="#visuals" class="btn">Bekijk de demo</a>
+  </div>
+
+  <div class="intro-image">
+    <img src="images/chipszak.png" alt="Lay’s chips configurator preview" />
+  </div>
+</section>
+
+<!-- ABOUT PROJECT -->
+<section class="about-project">
+  <div class="about-text">
+    <h2>Over het project</h2>
+    <p>
+      Dit project combineert frontend development, 3D-visualisatie en gebruikersinteractie.
+      De configurator bestaat uit een Vue-interface die communiceert met een Three.js applicatie via postMessage.
+      Elke aanpassing wordt realtime vertaald naar het 3D-model van de chipszak.
+    </p>
+    <p>
+      Het project focust sterk op gebruiksvriendelijkheid, visuele feedback en technische koppeling tussen verschillende applicaties.
+      Bij het opslaan van een ontwerp wordt automatisch een screenshot gegenereerd van het 3D-resultaat.
+    </p>
+  </div>
+
+  <div class="about-side">
+    <h3>Mijn rol</h3>
+    <ul>
+      <li>UX/UI Design</li>
+      <li>Frontend (Vue.js)</li>
+      <li>3D Development (Three.js)</li>
+      <li>Technische integratie</li>
+    </ul>
+
+    <h3>Tools & Technologieën</h3>
+    <p>Vue.js, Three.js, JavaScript, HTML, CSS</p>
+  </div>
+</section>
+
+<!-- VISUALS / VIDEO -->
+<section class="visuals" id="visuals">
+  <h2>Visuals</h2>
+  <div class="visual-grid">
+    <video controls muted playsinline poster="images/chipszak.png">
+      <source src="videos/demo-lays.MOV" type="video/mp4">
+      Je browser ondersteunt deze video niet.
+    </video>
+  </div>
+  <a href="index.html#projects" class="btn">Bekijk mijn andere projecten</a>
+</section>
+
+<!-- REFLECTIE -->
+<section class="reflection">
+  <div class="reflection-inner">
+    <h2>Reflectie</h2>
+    <p>
+      Dit project liet mij sterk groeien in het combineren van design en development binnen één interactieve ervaring.
+      De technische communicatie tussen Vue en Three.js was uitdagend, maar gaf mij een diepgaand inzicht in hoe losse systemen
+      samen één gebruiksvriendelijke flow kunnen vormen.
+    </p>
+    <p>
+      De grootste leerpunten lagen in het structureren van data, realtime updates en het bewaken van performance.
+      Dit project bevestigde mijn interesse in interactieve toepassingen en 3D binnen digital experience design.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2025 Alitha Pauwels</p>
+</footer>
+
+<!-- JS -->
+<script src="scripts/project-effects.js"></script>
+<script src="scripts/nailshop.js"></script>
+
+</body>
+</html>
